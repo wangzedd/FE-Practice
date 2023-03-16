@@ -1,0 +1,396 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 去除列表默认格式 */
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    display: table;
+}
+.clearfix::after {
+    clear: both;
+}
+
+body {
+    background-color: #f3f5f7;
+}
+
+/* 版心 */
+.wrapper {
+    width: 1200px;
+    margin:0 auto;
+}
+
+.header {
+    height: 42px;
+    /* background-color: pink; */
+    margin: 30px auto;
+}
+
+.header h1 {
+    float: left;
+}
+
+.nav {
+    float: left;
+    margin-left: 70px;
+    height: 42px;
+   
+}
+
+.nav li {
+    float: left;
+    margin-right: 26px;
+}
+
+.nav li a {
+    display:block;
+    padding: 0 9px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 18px; 
+    font-family: 'MicrosoftYaHei',Sans-serif;
+    color:#050505;
+}
+
+.nav li a:hover {
+    border-bottom: 2px solid #00a4ff;
+}
+
+.search {
+    float: left;
+    width: 412px;
+    height: 42px;
+    border: solid 1px #00a4ff;
+    /* margin-left: 94-9-26; */
+    margin-left: 59px;
+}
+
+.search input {
+    float: left;
+    padding-left: 20px;
+    /* width: 362px; */
+    /*search的宽度是412，button图标因为是图片所以宽高最好不变，所以要牺牲input的尺寸 */
+    width: 360px;
+    height: 40px;
+    /* 为什么不给42：给42的话input边框会盖住盒子的边，所以要减去上下border的值 */
+
+    border: 0;
+}
+
+.search input::placeholder {
+    font-size: 14px;
+    font-family: MicrosoftYaHei;
+    color: #bfbfbf;
+}
+
+.search button {
+    float: left;
+    width: 50px;
+    height: 40px; 
+    border: 0;
+    background-image: url(../images/btn.png);
+}
+
+.user {
+    float: right;
+    margin-right: 35px;
+    height: 42px;
+    line-height: 42px;
+}
+/* 图片垂直居中 */
+.user img {
+    vertical-align: middle;
+}
+
+.username {
+    font-size: 14px;
+    color: #666666;
+} 
+
+.banner {
+    height: 420px;
+    background-color: #1c036c;
+}
+
+.banner .wrapper {
+    height: 420px;
+    background-image: url(../images/banner2.png);
+}
+
+.banner .course_list {
+    float: left;
+
+    padding: 12px 20px ;
+    width: 190px;
+    height: 420px;
+    /* 背景半透明，用rgba写法 */
+    background-color: rgba(0,0,0,0.3);
+
+    line-height: 44px;
+}
+
+.banner .schedule {
+    float: right;
+    margin-top: 50px;
+    width: 228px;
+    height: 300px;
+    background-color: #fff;
+}
+
+.banner .course_list a {
+    display: block;
+    font-size: 14px;
+    color: #fff;
+}
+
+.banner .course_list a:hover {
+    font-size: 20px;
+    color: #00b4ff;
+}
+
+.banner .course_list span {
+    float: right;
+}
+
+.banner .schedule h2 {
+    width: 228px;
+    height: 48px;
+    background-color: #9bceea;
+    text-align: center;
+    line-height: 48px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.banner .schedule .content {
+    padding: 0 19px;
+}
+
+.banner .schedule .content dl {
+    padding: 12px 0;
+    border-bottom: 2px solid #e5e5e5;
+
+    font-size: 14px;
+    color: #4e4e4e;
+    font-family: 'FZLTCXHJW--GB1-0',Sans-serif;
+
+}
+
+.banner .schedule .content span {
+    font-size: 16px;
+}
+
+.banner .schedule .content dd {
+    color:#a5a5a5;
+}
+
+.banner .schedule .all_schedule {
+    display: block;
+    /* margin:4px 14px 0; */
+    margin:4px auto 0;
+    width: 200px;
+	height: 40px;
+	border: solid 1px #00a4ff;
+
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #00a4ff;
+}
+
+.path {
+    margin-top: 8px;
+    padding-left: 34px;
+    padding-right: 26px;
+    /* width: 1200px; */
+    height: 60px;
+    background-color: #fff;
+    /* 阴影 */
+    box-shadow: 0px 2px 3px 0px 
+		rgba(118, 118, 118, 0.2);
+
+    line-height: 60px;
+    }
+
+.path h3 {
+    float: left;
+    margin-right: 34px;
+    font-size: 16px;
+    color:#00a4ff;
+    font-weight: 400;
+}
+
+.path ul {
+    float: left;
+}
+
+.path li {
+    float: left;
+
+}
+.path li a {
+    padding: 0 34px;
+    border-left: 1px solid #bfbfbf;
+    font-size: 16px;
+    color:#050505;
+}
+
+.path .alter {
+    float: right;
+    font-size: 14px;
+    color: #00a4ff;
+}
+
+.courses {
+    margin-top: 35px;
+    /* 不给高度，靠内容撑开 */
+
+}
+
+.courses .title {
+
+    height: 40px;
+}
+
+.courses .title h3 {
+    float: left;
+    font-size: 20px;
+    color: #494949;
+    font-weight: 400;
+}
+
+.courses .title a {
+    float: right;
+    margin-right: 30px;
+    font-size: 12px;
+    color: #a5a5a5;
+}
+
+.courses .content li {
+    position: relative;
+    float: left;
+    /* 超出li的部分不显示，针对图片尺寸可能超过了li的范围 */
+    /* overflow: hidden; */
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width: 228px;
+    height: 270px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px 0px 
+		rgba(118, 118, 118, 0.5);
+}
+/* 待优化，有些图片大小不一样，但是overflow之后HOT小图往li外面出去了一点的定位样式就不好做了 */
+.courses .content li img:first-child{
+    width: 228px;
+}
+.courses .content li:nth-child(5n) {
+    margin-right: 0;
+}
+
+.courses .content li h4 {
+    padding:20px 25px;
+    font-size: 14px;
+    color:#050505;
+    font-weight: 400;
+}
+
+.courses .content li p {
+    padding: 0 25px;
+    font-size: 12px;
+    color:#999;
+}
+/* 待优化，一行文字和两行文字的间距不同 */
+.courses .content li .a7,
+.courses .content li .a6,
+.courses .content li .a8 {
+    padding-top:17px;
+}
+.courses .content li span {
+    color:#ff7c2d;
+}
+
+/* 定位：HOT小图 */
+.courses .content li .hot {
+    position: absolute;
+    right:-4px;
+    top: 4px;
+}
+
+/* 给课程加交互，鼠标放到区域上，整块上升一点点 */
+.courses .content li:hover {
+    top: -8px;
+    box-shadow: 0 15px 30px rgb(0 0 0 / 10%);
+}
+
+/* 这里要用到清除浮动，在课程 li 的父级(.content)中去清除  */
+/* li未设置高度但设了浮动，脱标了，撑不开父级的高度，所以要在其父级.content设置clearfix类名清除类名  */
+/* 版权 */
+
+.footer {
+    margin-top:40px;
+    padding-top: 30px;
+    height: 417px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.footer .logo {
+    float: left;
+}
+
+.footer .logo p {
+    margin: 20px 0 15px;
+
+    font-size: 12px;
+    color: #666;
+}
+
+.footer .logo p a:last-child {
+    display: block;
+    width: 120px;
+    height: 36px;
+    border: 1px solid #00a4ff;
+    text-align: center;
+    line-height: 36px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #00a4ff;
+}
+
+.footer .logo a:first-child {
+    color:#666;
+}
+
+.footer .list {
+    float: right;
+}
+
+.footer .list dl {
+    float: left;
+    margin-left: 120px;
+    font-size: 16px;
+    font-family: Simsun;
+    color: #333;
+}
+
+.footer .list dl:last-child {
+    margin-right: 30px;
+}
+
+.footer .list dl a {
+    font-size: 12px;
+    color: #333;
+}
